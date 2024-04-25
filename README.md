@@ -8,6 +8,8 @@ In the future I plan to add an administration panel from which to add and edit a
 
 Finally I would like to thank <a href="https://www.codingnepalweb.com/">CodingNepal</a> for the sidebar. It has been used one of his sidebars published on the web as a basis for the development of this panel.
 
+<img src="https://github.com/MrClaau/api-docs-tool/blob/main/image1.png" />
+
 ## Installation instructions:
 
 - Download the app file
