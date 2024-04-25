@@ -32,6 +32,7 @@ const ParamsContainer = styled.div`
 
 const ParamItem = styled.div`
 
+    margin-top: 10px;
 
 `
 
