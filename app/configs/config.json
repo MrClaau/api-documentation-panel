@@ -1,0 +1,173 @@
+{
+    "site": {
+        "title": "Example API Docs",
+        "homeTitle": "My home API Docs"
+    },
+    "pages": {
+        "1": {
+            "type": "GET",
+            "title": "/example/url",
+            "description": "This is a <b>example</b> GET request.",
+            "header": [
+                {
+                    "title": "Authorization",
+                    "description": "Bearer code",
+                    "required": true
+                }
+            ],
+            "params": [
+                {
+                    "type": "string",
+                    "title": "search",
+                    "description": "example <b>example</b>",
+                    "required": true
+                }
+            ],
+            "test": {
+                "url": "https://api.example.com/example/url",
+                "responses": [
+                    {
+                        "status": 200,
+                        "title": "Correct",
+                        "description": "You recive a example response.",
+                        "response": {
+                            "example": {
+                                "ID": "1234",
+                                "description": "Example response",
+                                "examples": ["this", "is", "an", "example"]
+                            }
+                        }
+                    },
+                    {
+                        "status": 301,
+                        "title": "Redirect",
+                        "description": "Example redirect",
+                        "response": {
+                            "redirect": "https://example.com/other/url"
+                        }
+                    },
+                    {
+                        "status": 500,
+                        "title": "Internal Server Error",
+                        "description": "Example other response error",
+                        "response": {}
+                    }
+                ]
+            }
+        },
+        "2": {
+            "type": "POST",
+            "title": "/example/url",
+            "description": "This is a <b>example</b> GET request.",
+            "header": [
+                {
+                    "title": "Authorization",
+                    "description": "Bearer code",
+                    "required": true
+                }
+            ],
+            "params": [
+                {
+                    "type": "string",
+                    "title": "search",
+                    "description": "example <b>example</b>",
+                    "required": true
+                }
+            ],
+            "test": {
+                "url": "https://api.example.com/example/url",
+                "responses": [
+                    {
+                        "status": 200,
+                        "title": "Correct",
+                        "description": "You recive a example response.",
+                        "response": {
+                            "example": {
+                                "ID": "1234",
+                                "description": "Example response",
+                                "examples": ["this", "is", "an", "example"]
+                            }
+                        }
+                    },
+                    {
+                        "status": 301,
+                        "title": "Redirect",
+                        "description": "Example redirect",
+                        "response": {
+                            "redirect": "https://example.com/other/url"
+                        }
+                    },
+                    {
+                        "status": 500,
+                        "title": "Internal Server Error",
+                        "description": "Example other response error",
+                        "response": {}
+                    }
+                ]
+            }
+        },
+        "3": {
+            "type": "DELETE",
+            "title": "/example/url",
+            "description": "This is a <b>example</b> GET request.",
+            "header": [
+                {
+                    "title": "Authorization",
+                    "description": "Bearer code",
+                    "required": true
+                }
+            ],
+            "params": [
+                {
+                    "type": "string",
+                    "title": "search",
+                    "description": "example <b>example</b>",
+                    "required": true
+                }
+            ],
+            "test": {
+                "url": "https://api.example.com/example/url",
+                "responses": [
+                    {
+                        "status": 200,
+                        "title": "Correct",
+                        "description": "You recive a example response.",
+                        "response": {
+                            "example": {
+                                "ID": "1234",
+                                "description": "Example response",
+                                "examples": ["this", "is", "an", "example"]
+                            }
+                        }
+                    },
+                    {
+                        "status": 301,
+                        "title": "Redirect",
+                        "description": "Example redirect",
+                        "response": {
+                            "redirect": "https://example.com/other/url"
+                        }
+                    },
+                    {
+                        "status": 500,
+                        "title": "Internal Server Error",
+                        "description": "Example other response error",
+                        "response": {}
+                    }
+                ]
+            }
+        }
+    },
+    "methods": [
+        {
+            "faIcon": "fa-solid fa-user",
+            "title": "/example",
+            "pages": ["1", "2"]
+        },
+        {
+            "faIcon": "fa-solid fa-circle-info",
+            "title": "/not/example",
+            "pages": ["3"]
+        }
+    ]
+}
