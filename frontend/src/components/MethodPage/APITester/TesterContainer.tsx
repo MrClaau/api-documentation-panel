@@ -26,6 +26,10 @@ const ArrowTop = styled.div`
         }
     }
 
+    &:hover {
+        background-color: #1d1b31;
+    }
+
 `
 
 const Container = styled.div`
@@ -328,8 +332,6 @@ export default ({ data }: { data: any }) => {
                         input.style.border = `red solid 2px`;
                         errorTextToggle(`Required params`, false);
                         return;
-                    } else {
-                        body[param.title] = params.params[param.title]
                     }
                 }
 

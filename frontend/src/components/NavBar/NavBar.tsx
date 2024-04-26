@@ -24,7 +24,7 @@ export default () => {
     useEffect(() => {
 
         axios.get(`/api/config`).then((res) => {
-            let config:any = pageContext.config;
+            let config: any = pageContext.config;
             config.title = res.data.title;
             config.homePageTitle = res.data.homePageTitle;
             pageContext.setConfig(config);
@@ -62,6 +62,16 @@ export default () => {
                             {pages.categories.map((element: any, index: any) => (
                                 <NavBarItem icon={element.icon} title={element.title} subitems={element.pages} />
                             ))}
+                            <li>
+                                <a href='https://github.com/MrClaau/api-documentation-panel' target='_blank'>
+                                    <div className="powered-container">
+                                        <div className="title">
+                                            Powered by
+                                        </div>
+                                        <div className='subtitle'>API Documentation Panel</div>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <section className="home-section">
