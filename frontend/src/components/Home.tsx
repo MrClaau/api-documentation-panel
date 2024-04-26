@@ -4,9 +4,9 @@ import styled from 'styled-components/macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBook, faVideo } from '@fortawesome/free-solid-svg-icons';
-import NavBarItem from './NavBarItem';
+import NavBarItem from './NavBar/NavBarItem';
 import axios from 'axios';
-import PageContext from './PageContext';
+import PageContext from './Context/PageContext';
 
 export default () => {
 

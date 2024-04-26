@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PageContext from './components/PageContext';
-import APIMethodPage from './components/APIMethodPage';
+import PageContext from './components/Context/PageContext';
+import APIMethodPage from './components/MethodPage/APIMethodPage';
 import Home from './components/Home';
 
 function App() {

@@ -5,6 +5,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+
+  --bg-color-1: #11101d;
+  --bg-color-2: #E4E9F7;
+  --txt-color-1: #fff;
+  --txt-color-2: #11101d;
+
+  transition: all 0.3s ease;
+
 }
 .sidebar{
   position: fixed;
@@ -27,7 +35,7 @@
 }
 .sidebar .logo-details i{
   font-size: 30px;
-  color: #fff;
+  color: var(--txt-color-1);
   height: 50px;
   min-width: 78px;
   text-align: center;
@@ -35,7 +43,7 @@
 }
 .sidebar .logo-details .logo_name{
   font-size: 22px;
-  color: #fff;
+  color: var(--txt-color-1);
   font-weight: 600;
   transition: 0.3s ease;
   transition-delay: 0.1s;
@@ -43,7 +51,7 @@
 
 .icon {
   font-size: 30px;
-  color: #fff;
+  color: var(--txt-color-1);
   height: 30px;
   min-width: 78px;
   text-align: center;

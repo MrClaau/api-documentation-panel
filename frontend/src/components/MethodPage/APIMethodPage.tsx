@@ -2,11 +2,12 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { Outlet, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components/macro';
-import PageContext from './PageContext';
-import APITag from './APITag';
+import PageContext from '../Context/PageContext';
+import APITag from '../APITag';
 import APIResponseTag from './APIResponseTag';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import TesterContainer from './APITester/TesterContainer';
 
 const PageContainer = styled.div`
 
@@ -133,6 +134,8 @@ export default () => {
             {!pageInfo ? (<></>) : (
                 <>
 
+                    <TesterContainer data={pageInfo} />
+
                     <div style={{ marginTop: `15px` }}>
                         <a href={pageInfo.test.url} target='_blank'><URLContainer>{pageInfo.test.url}</URLContainer></a>
                     </div>
@@ -148,22 +151,47 @@ export default () => {
 
                             <ParamsContainer>
 
-                                {(pageInfo.header.length == 0) ? (<></>) : (
 
-                                    <>
+                                <>
 
-                                        {pageInfo.header.map((item: any, index: any) => (
+                                    {pageInfo.header.map((item: any, index: any) => (
 
-                                            <>
-                                                <ParamItem>
-                                                    - {item.title} <RequiredTag>Required</RequiredTag> <span dangerouslySetInnerHTML={{ __html: item.description }} ></span>
-                                                </ParamItem>
-                                            </>
-                                        ))}
+                                        <>
+                                            <ParamItem>
+                                                - {item.title} <RequiredTag>Required</RequiredTag> <span dangerouslySetInnerHTML={{ __html: item.description }} ></span>
+                                            </ParamItem>
+                                        </>
+                                    ))}
 
-                                    </>
+                                </>
 
-                                )}
+
+                            </ParamsContainer>
+                        </>
+                    )}
+
+                    {(pageInfo.query.length == 0) ? (
+                        <></>
+                    ) : (
+                        <>
+                            <h2>Queries:</h2>
+
+                            <ParamsContainer>
+
+
+                                <>
+
+                                    {pageInfo.query.map((item: any, index: any) => (
+
+                                        <>
+                                            <ParamItem>
+                                                - {item.title} <InfoTag>{item.type}</InfoTag> <RequiredTag>Required</RequiredTag> <span dangerouslySetInnerHTML={{ __html: item.description }} ></span>
+                                            </ParamItem>
+                                        </>
+                                    ))}
+
+                                </>
+
 
                             </ParamsContainer>
                         </>
@@ -177,28 +205,51 @@ export default () => {
 
                             <ParamsContainer>
 
-                                {(pageInfo.params.length == 0) ? (<></>) : (
 
-                                    <>
+                                <>
 
-                                        {pageInfo.params.map((item: any, index: any) => (
+                                    {pageInfo.params.map((item: any, index: any) => (
 
-                                            <>
-                                                <ParamItem>
-                                                    - {item.title} <InfoTag>{item.type}</InfoTag> <RequiredTag>Required</RequiredTag> <span dangerouslySetInnerHTML={{ __html: item.description }} ></span>
-                                                </ParamItem>
-                                            </>
-                                        ))}
+                                        <>
+                                            <ParamItem>
+                                                - {item.title} <InfoTag>{item.type}</InfoTag> <RequiredTag>Required</RequiredTag> <span dangerouslySetInnerHTML={{ __html: item.description }} ></span>
+                                            </ParamItem>
+                                        </>
+                                    ))}
 
-                                    </>
+                                </>
 
-                                )}
 
                             </ParamsContainer>
                         </>
                     )}
 
-                    <div></div>
+                    {(pageInfo.body.length == 0) ? (
+                        <></>
+                    ) : (
+                        <>
+                            <h2>Body:</h2>
+
+                            <ParamsContainer>
+
+
+                                <>
+
+                                    {pageInfo.body.map((item: any, index: any) => (
+
+                                        <>
+                                            <ParamItem>
+                                                - {item.title} <InfoTag>{item.type}</InfoTag> <RequiredTag>Required</RequiredTag> <span dangerouslySetInnerHTML={{ __html: item.description }} ></span>
+                                            </ParamItem>
+                                        </>
+                                    ))}
+
+                                </>
+
+
+                            </ParamsContainer>
+                        </>
+                    )}
 
                     {(pageInfo.test.responses.length == 0) ? (
                         <></>

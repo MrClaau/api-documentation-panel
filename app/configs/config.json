@@ -8,23 +8,20 @@
             "type": "GET",
             "title": "/example/url",
             "description": "This is a <b>example</b> GET request.",
-            "header": [
-                {
-                    "title": "Authorization",
-                    "description": "Bearer code",
-                    "required": true
-                }
-            ],
+            "header": [],
+            "body": [],
             "params": [
                 {
                     "type": "string",
-                    "title": "search",
+                    "title": "ID",
                     "description": "example <b>example</b>",
                     "required": true
                 }
             ],
+            "query": [],
             "test": {
-                "url": "https://api.example.com/example/url",
+                "url": "https://pokeapi.co/api/v2/ability/{ID}",
+                "base_url": "https://pokeapi.co/api/v2/ability/{ID}",
                 "responses": [
                     {
                         "status": 200,
@@ -34,7 +31,12 @@
                             "example": {
                                 "ID": "1234",
                                 "description": "Example response",
-                                "examples": ["this", "is", "an", "example"]
+                                "examples": [
+                                    "this",
+                                    "is",
+                                    "an",
+                                    "example"
+                                ]
                             }
                         }
                     },
@@ -56,26 +58,29 @@
             }
         },
         "2": {
-            "type": "POST",
+            "type": "GET",
             "title": "/example/url",
             "description": "This is a <b>example</b> GET request.",
-            "header": [
-                {
-                    "title": "Authorization",
-                    "description": "Bearer code",
-                    "required": true
-                }
-            ],
-            "params": [
+            "header": [],
+            "body": [],
+            "params": [],
+            "query": [
                 {
                     "type": "string",
-                    "title": "search",
-                    "description": "example <b>example</b>",
+                    "title": "s",
+                    "description": "Search term",
                     "required": true
+                },
+                {
+                    "type": "string",
+                    "title": "short",
+                    "description": "Search term",
+                    "required": false
                 }
             ],
             "test": {
-                "url": "https://api.example.com/example/url",
+                "url": "https://hermes.piramide.tv/video/search",
+                "base_url": "https://hermes.piramide.tv/video/search",
                 "responses": [
                     {
                         "status": 200,
@@ -85,7 +90,12 @@
                             "example": {
                                 "ID": "1234",
                                 "description": "Example response",
-                                "examples": ["this", "is", "an", "example"]
+                                "examples": [
+                                    "this",
+                                    "is",
+                                    "an",
+                                    "example"
+                                ]
                             }
                         }
                     },
@@ -117,7 +127,9 @@
                     "required": true
                 }
             ],
-            "params": [
+            "params": [],
+            "body": [],
+            "query": [
                 {
                     "type": "string",
                     "title": "search",
@@ -127,6 +139,7 @@
             ],
             "test": {
                 "url": "https://api.example.com/example/url",
+                "base_url": "https://api.example.com/example/url",
                 "responses": [
                     {
                         "status": 200,
@@ -136,7 +149,12 @@
                             "example": {
                                 "ID": "1234",
                                 "description": "Example response",
-                                "examples": ["this", "is", "an", "example"]
+                                "examples": [
+                                    "this",
+                                    "is",
+                                    "an",
+                                    "example"
+                                ]
                             }
                         }
                     },
@@ -162,12 +180,17 @@
         {
             "faIcon": "fa-solid fa-user",
             "title": "/example",
-            "pages": ["1", "2"]
+            "pages": [
+                "1",
+                "2"
+            ]
         },
         {
             "faIcon": "fa-solid fa-circle-info",
             "title": "/not/example",
-            "pages": ["3"]
+            "pages": [
+                "3"
+            ]
         }
     ]
 }

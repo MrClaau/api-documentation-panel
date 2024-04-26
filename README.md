@@ -5,6 +5,11 @@ Live test view <a href="https://example-docs.clau.es" target='_blank'>here</a>
 
 I have created this fully customisable panel for anyone who needs to have API documentation. I have created it mainly for my own use as a programmer and I share it freely with anyone who might be interested. <br />
 
+You can test the API itself in real time with the tester panel. <br />
+
+<img src="https://github.com/MrClaau/api-docs-tool/blob/main/image2.png" />
+<img src="https://github.com/MrClaau/api-docs-tool/blob/main/image3.png" />
+
 For now the application has no control panel or admin account, the pages, as well as the whole web is modified from a configuration file called: config.json
 
 In the future I plan to add an administration panel from which to add and edit all the documentation.
@@ -34,4 +39,3 @@ Finally I would like to thank <a href="https://www.codingnepalweb.com/">CodingNe
 - SQL
 - Admin account
 - Admin panel
-- Api tester
