@@ -7,7 +7,6 @@ I have created this fully customisable panel for anyone who needs to have API do
 
 You can test the API itself in real time with the tester panel. <br />
 
-<img src="https://github.com/MrClaau/api-docs-tool/blob/main/image2.png" />
 <img src="https://github.com/MrClaau/api-docs-tool/blob/main/image3.png" />
 
 For now the application has no control panel or admin account, the pages, as well as the whole web is modified from a configuration file called: config.json
