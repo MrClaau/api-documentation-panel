@@ -79,8 +79,8 @@
                 }
             ],
             "test": {
-                "url": "https://hermes.piramide.tv/video/search",
-                "base_url": "https://hermes.piramide.tv/video/search",
+                "url": "https://api.example.com/video/search",
+                "base_url": "https://api.example.com/video/search",
                 "responses": [
                     {
                         "status": 200,
