@@ -16,6 +16,7 @@ Finally I would like to thank <a href="https://www.codingnepalweb.com/">CodingNe
 ## Installation instructions:
 
 - Download the app file
+- Run `npm i` to install all libraries.
 - Modify in the .env the port of the website, or in case you want the SSL files (in this case the port will automatically change to 443).
 - Edit in the config folder the ‘config.json’ file and add all your necessary pages, urls, parameters, responses.
 - Edit the file homePage.html, this will be displayed on the Home page, you can add css with a style tag or over the tags themselves.
