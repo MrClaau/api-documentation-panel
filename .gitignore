@@ -1,3 +1,5 @@
 node_modules
 .env
 build_and_test.sh
+dist
+build
