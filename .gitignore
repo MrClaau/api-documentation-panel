@@ -3,4 +3,4 @@ node_modules
 build_and_test.sh
 dist
 build.json
-app/configs
+configs
